@@ -28,6 +28,7 @@ terraform apply -var-file=/Users/ogiron/workspace/jumlabs/inf/digital-ocean-terr
 ### Variables
 
 #### Digital Ocean API
+
 <table>
     <tr>
         <th>do_token</th>
@@ -52,6 +53,7 @@ terraform apply -var-file=/Users/ogiron/workspace/jumlabs/inf/digital-ocean-terr
 </table>
 
 #### Host Creation
+    
 <table>
     <tr>
         <th>Variable</th>
