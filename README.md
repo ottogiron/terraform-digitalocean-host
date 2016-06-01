@@ -51,12 +51,6 @@ terraform apply -var-file=/Users/ogiron/workspace/jumlabs/inf/digital-ocean-terr
     </tr>
 </table>
 
-variable "do_token" {}
-variable "pub_key" {}
-variable "pvt_key" {}
-variable "ssh_fingerprint" {}
-
-
 #### Host Creation
 <table>
     <tr>
@@ -113,11 +107,11 @@ variable "ssh_fingerprint" {}
     <tr>
         <td>domain</td>
         <td>empty</td>
-        <td>DNS domain for this host. e.g. jumlabs.com</td>
+        <td>Existing Digital Ocean DNS in which the host will be added e.g. jumlabs.com</td>
     </tr>
     <tr>
         <td>domain_name</td>
         <td>empty</td>
-        <td>Name to be given to the created DNS domain.</td>
+        <td>Domain name e.g cd will create cd.jumlabs.com   </td>
     </tr>
 </table>
