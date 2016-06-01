@@ -1,6 +1,6 @@
 # Terraform Digital Ocean Host Module #
 
-## Terraform module for getting a bare bones digital ocean host. The host is provisioned using an ansible module.
+ Terraform module for getting a bare bones digital ocean host. The host is provisioned using an ansible module.
 
 ### Example
 
