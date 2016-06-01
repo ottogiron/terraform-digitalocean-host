@@ -19,6 +19,8 @@ variable "provisioner_name" {}
 variable "provisioner_remote_path" {
     default = "/opt/jumlabs/provisioner/host"
 }
+variable "domain" {}
+variable "domain_name" {}
 
 resource "digitalocean_droplet" "digitalocean_host" {
     image = "${var.image}"
@@ -59,4 +61,11 @@ provisioner "remote-exec" {
         "cd ${var.provisioner_remote_path}/${var.provisioner_name} && ansible-galaxy install -r requeriments.yml --force && ansible-playbook -i \"localhost,\" -c local  ${var.provisioner_playbook}"
         ] 
 }
+}
+
+resource "digitalocean_record" "a_digital_ocean_host" {
+  domain = "${var.domain}"
+  type = "A"
+  name = "${var.domain_name}"
+  value = "${digitalocean_droplet.digitalocean_host.ipv4_address}"
 }
